@@ -121,7 +121,7 @@
 		D87A470B1461C0170097B960 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D87A470A1461C0170097B960 /* main.m */; };
 		D87A470E1461C0170097B960 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D87A470D1461C0170097B960 /* AppDelegate.m */; };
 		D87A47111461C0170097B960 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87A47101461C0170097B960 /* RootViewController.m */; };
-		D87A47141461C0170097B960 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D87A47131461C0170097B960 /* HelloWorldLayer.m */; };
+		D87A471D1461C7370097B960 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D87A471C1461C7370097B960 /* GameScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -357,9 +357,9 @@
 		D87A470D1461C0170097B960 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D87A470F1461C0170097B960 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		D87A47101461C0170097B960 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		D87A47121461C0170097B960 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		D87A47131461C0170097B960 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		D87A47151461C0170097B960 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
+		D87A471B1461C7370097B960 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = ../GameScene.h; sourceTree = "<group>"; };
+		D87A471C1461C7370097B960 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameScene.m; path = ../GameScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -420,8 +420,8 @@
 				D87A470D1461C0170097B960 /* AppDelegate.m */,
 				D87A470F1461C0170097B960 /* RootViewController.h */,
 				D87A47101461C0170097B960 /* RootViewController.m */,
-				D87A47121461C0170097B960 /* HelloWorldLayer.h */,
-				D87A47131461C0170097B960 /* HelloWorldLayer.m */,
+				D87A471B1461C7370097B960 /* GameScene.h */,
+				D87A471C1461C7370097B960 /* GameScene.m */,
 				D87A47151461C0170097B960 /* GameConfig.h */,
 				D87A45BB1461C0150097B960 /* Resources */,
 				D87A45CF1461C0150097B960 /* libs */,
@@ -925,7 +925,7 @@
 				D87A470B1461C0170097B960 /* main.m in Sources */,
 				D87A470E1461C0170097B960 /* AppDelegate.m in Sources */,
 				D87A47111461C0170097B960 /* RootViewController.m in Sources */,
-				D87A47141461C0170097B960 /* HelloWorldLayer.m in Sources */,
+				D87A471D1461C7370097B960 /* GameScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1019,6 +1019,7 @@
 				D87A471A1461C0170097B960 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
