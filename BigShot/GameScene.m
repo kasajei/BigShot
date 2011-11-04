@@ -7,7 +7,7 @@
 //
 
 #import "GameScene.h"
-
+#import "Gun.h"
 @implementation GameScene
 
 static GameScene* instanceOfGameScene;
@@ -28,6 +28,24 @@ static GameScene* instanceOfGameScene;
 -(id)init{
     if((self = [super init])){
         instanceOfGameScene = self;
+        // 画面のサイズを取得する
+        CGSize winSize = [[CCDirector sharedDirector] winSize];
+        
+        ////////////////////
+        // 背景
+        ////////////////////
+        // 背景イメージをからCCSpriteを作る
+        CCSprite *backgroundImage = [CCSprite spriteWithFile:@"stage.png"];
+        // cocos2dではアンカーポイントが左上ではなく中心にあるので注意
+        backgroundImage.position = CGPointMake(winSize.width/2, winSize.height/2);
+        // GameSceneに背景を載せる
+        [self addChild:backgroundImage];
+        
+        ///////////////////////
+        //Gun
+        //////////////////////
+        Gun *gun = [Gun gun];
+        [self addChild:gun];
     }
     return self;
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D84C4FE814642CED009E7CAA /* Gun.m in Sources */ = {isa = PBXBuildFile; fileRef = D84C4FE714642CED009E7CAA /* Gun.m */; };
 		D87A45AB1461C0150097B960 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87A45AA1461C0150097B960 /* QuartzCore.framework */; };
 		D87A45AD1461C0150097B960 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87A45AC1461C0150097B960 /* OpenGLES.framework */; };
 		D87A45AF1461C0150097B960 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87A45AE1461C0150097B960 /* OpenAL.framework */; };
@@ -122,9 +123,19 @@
 		D87A470E1461C0170097B960 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D87A470D1461C0170097B960 /* AppDelegate.m */; };
 		D87A47111461C0170097B960 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87A47101461C0170097B960 /* RootViewController.m */; };
 		D87A471D1461C7370097B960 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D87A471C1461C7370097B960 /* GameScene.m */; };
+		D888D0E1146422EA000B5F90 /* stage-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = D888D0DF146422EA000B5F90 /* stage-hd.png */; };
+		D888D0E2146422EA000B5F90 /* stage.png in Resources */ = {isa = PBXBuildFile; fileRef = D888D0E0146422EA000B5F90 /* stage.png */; };
+		D888D0E6146424AB000B5F90 /* target-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = D888D0E4146424AB000B5F90 /* target-hd.png */; };
+		D888D0E7146424AB000B5F90 /* target.png in Resources */ = {isa = PBXBuildFile; fileRef = D888D0E5146424AB000B5F90 /* target.png */; };
+		D888D0F014642A16000B5F90 /* gunLeft-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = D888D0EC14642A15000B5F90 /* gunLeft-hd.png */; };
+		D888D0F114642A16000B5F90 /* gunLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = D888D0ED14642A15000B5F90 /* gunLeft.png */; };
+		D888D0F214642A16000B5F90 /* gunRight-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = D888D0EE14642A15000B5F90 /* gunRight-hd.png */; };
+		D888D0F314642A16000B5F90 /* gunRight.png in Resources */ = {isa = PBXBuildFile; fileRef = D888D0EF14642A15000B5F90 /* gunRight.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D84C4FE614642CED009E7CAA /* Gun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gun.h; sourceTree = "<group>"; };
+		D84C4FE714642CED009E7CAA /* Gun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gun.m; sourceTree = "<group>"; };
 		D87A45A61461C0150097B960 /* BigShot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigShot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87A45AA1461C0150097B960 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D87A45AC1461C0150097B960 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -360,6 +371,14 @@
 		D87A47151461C0170097B960 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		D87A471B1461C7370097B960 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = ../GameScene.h; sourceTree = "<group>"; };
 		D87A471C1461C7370097B960 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameScene.m; path = ../GameScene.m; sourceTree = "<group>"; };
+		D888D0DF146422EA000B5F90 /* stage-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "stage-hd.png"; path = "../../resouce/stage-hd.png"; sourceTree = "<group>"; };
+		D888D0E0146422EA000B5F90 /* stage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stage.png; path = ../../resouce/stage.png; sourceTree = "<group>"; };
+		D888D0E4146424AB000B5F90 /* target-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "target-hd.png"; path = "../../resouce/target-hd.png"; sourceTree = "<group>"; };
+		D888D0E5146424AB000B5F90 /* target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = target.png; path = ../../resouce/target.png; sourceTree = "<group>"; };
+		D888D0EC14642A15000B5F90 /* gunLeft-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gunLeft-hd.png"; path = "../../resouce/gunLeft-hd.png"; sourceTree = "<group>"; };
+		D888D0ED14642A15000B5F90 /* gunLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gunLeft.png; path = ../../resouce/gunLeft.png; sourceTree = "<group>"; };
+		D888D0EE14642A15000B5F90 /* gunRight-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gunRight-hd.png"; path = "../../resouce/gunRight-hd.png"; sourceTree = "<group>"; };
+		D888D0EF14642A15000B5F90 /* gunRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gunRight.png; path = ../../resouce/gunRight.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -422,6 +441,8 @@
 				D87A47101461C0170097B960 /* RootViewController.m */,
 				D87A471B1461C7370097B960 /* GameScene.h */,
 				D87A471C1461C7370097B960 /* GameScene.m */,
+				D84C4FE614642CED009E7CAA /* Gun.h */,
+				D84C4FE714642CED009E7CAA /* Gun.m */,
 				D87A47151461C0170097B960 /* GameConfig.h */,
 				D87A45BB1461C0150097B960 /* Resources */,
 				D87A45CF1461C0150097B960 /* libs */,
@@ -433,6 +454,14 @@
 		D87A45BB1461C0150097B960 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D888D0EC14642A15000B5F90 /* gunLeft-hd.png */,
+				D888D0ED14642A15000B5F90 /* gunLeft.png */,
+				D888D0EE14642A15000B5F90 /* gunRight-hd.png */,
+				D888D0EF14642A15000B5F90 /* gunRight.png */,
+				D888D0E4146424AB000B5F90 /* target-hd.png */,
+				D888D0E5146424AB000B5F90 /* target.png */,
+				D888D0DF146422EA000B5F90 /* stage-hd.png */,
+				D888D0E0146422EA000B5F90 /* stage.png */,
 				D87A45BC1461C0150097B960 /* Default.png */,
 				D87A45BE1461C0150097B960 /* fps_images.png */,
 				D87A45C01461C0150097B960 /* Icon-72.png */,
@@ -818,6 +847,14 @@
 				D87A45C91461C0150097B960 /* Icon.png in Resources */,
 				D87A45CB1461C0150097B960 /* Icon@2x.png in Resources */,
 				D87A45CE1461C0150097B960 /* iTunesArtwork in Resources */,
+				D888D0E1146422EA000B5F90 /* stage-hd.png in Resources */,
+				D888D0E2146422EA000B5F90 /* stage.png in Resources */,
+				D888D0E6146424AB000B5F90 /* target-hd.png in Resources */,
+				D888D0E7146424AB000B5F90 /* target.png in Resources */,
+				D888D0F014642A16000B5F90 /* gunLeft-hd.png in Resources */,
+				D888D0F114642A16000B5F90 /* gunLeft.png in Resources */,
+				D888D0F214642A16000B5F90 /* gunRight-hd.png in Resources */,
+				D888D0F314642A16000B5F90 /* gunRight.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -926,6 +963,7 @@
 				D87A470E1461C0170097B960 /* AppDelegate.m in Sources */,
 				D87A47111461C0170097B960 /* RootViewController.m in Sources */,
 				D87A471D1461C7370097B960 /* GameScene.m in Sources */,
+				D84C4FE814642CED009E7CAA /* Gun.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
