@@ -129,8 +129,6 @@
 		D888D0E7146424AB000B5F90 /* target.png in Resources */ = {isa = PBXBuildFile; fileRef = D888D0E5146424AB000B5F90 /* target.png */; };
 		D888D0F014642A16000B5F90 /* gunLeft-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = D888D0EC14642A15000B5F90 /* gunLeft-hd.png */; };
 		D888D0F114642A16000B5F90 /* gunLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = D888D0ED14642A15000B5F90 /* gunLeft.png */; };
-		D888D0F214642A16000B5F90 /* gunRight-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = D888D0EE14642A15000B5F90 /* gunRight-hd.png */; };
-		D888D0F314642A16000B5F90 /* gunRight.png in Resources */ = {isa = PBXBuildFile; fileRef = D888D0EF14642A15000B5F90 /* gunRight.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -377,8 +375,6 @@
 		D888D0E5146424AB000B5F90 /* target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = target.png; path = ../../resouce/target.png; sourceTree = "<group>"; };
 		D888D0EC14642A15000B5F90 /* gunLeft-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gunLeft-hd.png"; path = "../../resouce/gunLeft-hd.png"; sourceTree = "<group>"; };
 		D888D0ED14642A15000B5F90 /* gunLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gunLeft.png; path = ../../resouce/gunLeft.png; sourceTree = "<group>"; };
-		D888D0EE14642A15000B5F90 /* gunRight-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gunRight-hd.png"; path = "../../resouce/gunRight-hd.png"; sourceTree = "<group>"; };
-		D888D0EF14642A15000B5F90 /* gunRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gunRight.png; path = ../../resouce/gunRight.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -456,8 +452,6 @@
 			children = (
 				D888D0EC14642A15000B5F90 /* gunLeft-hd.png */,
 				D888D0ED14642A15000B5F90 /* gunLeft.png */,
-				D888D0EE14642A15000B5F90 /* gunRight-hd.png */,
-				D888D0EF14642A15000B5F90 /* gunRight.png */,
 				D888D0E4146424AB000B5F90 /* target-hd.png */,
 				D888D0E5146424AB000B5F90 /* target.png */,
 				D888D0DF146422EA000B5F90 /* stage-hd.png */,
@@ -853,8 +847,6 @@
 				D888D0E7146424AB000B5F90 /* target.png in Resources */,
 				D888D0F014642A16000B5F90 /* gunLeft-hd.png in Resources */,
 				D888D0F114642A16000B5F90 /* gunLeft.png in Resources */,
-				D888D0F214642A16000B5F90 /* gunRight-hd.png in Resources */,
-				D888D0F314642A16000B5F90 /* gunRight.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

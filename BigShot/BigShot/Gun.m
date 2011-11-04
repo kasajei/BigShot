@@ -31,4 +31,10 @@ static Gun* instanceOfGun;
     return  self;
 }
 
+// タッチでガンを入れ替える。flipBoolがYESで右、NOで左
+- (void)changeGunWithFlipX:(BOOL)flipBool{
+    CCFlipX *flipX = [CCFlipX actionWithFlipX:flipBool];
+    [self runAction:flipX];
+}
+
 @end

@@ -15,4 +15,5 @@
 +(Gun*)sharedGun;
 +(id)gun;
 -(id)initWithGunImage;
+- (void)changeGunWithFlipX:(BOOL)flipBool;
 @end
