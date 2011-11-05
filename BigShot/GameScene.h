@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
+enum{
+  kTagZIndexTitleScene = 100,  
+};
+
 @class Target;
 
 @interface GameScene : CCLayer {

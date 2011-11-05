@@ -9,6 +9,7 @@
 #import "GameScene.h"
 #import "Gun.h"
 #import "Target.h"
+#import "TitleScene.h"
 @implementation GameScene
 
 static GameScene* instanceOfGameScene;
@@ -31,6 +32,13 @@ static GameScene* instanceOfGameScene;
         instanceOfGameScene = self;
         // 画面のサイズを取得する
         CGSize winSize = [[CCDirector sharedDirector] winSize];
+        
+        
+        ///////////////////
+        // タイトルを作る
+        /////////////////// 
+        TitleScene *titleScene = [TitleScene titleScene];
+        [self addChild:titleScene z:kTagZIndexTitleScene];
         
         ////////////////////
         // 背景
@@ -92,9 +100,6 @@ static GameScene* instanceOfGameScene;
         _nowScore = 0;
         _highScore = 0;
         [self setScore];
-        
-        // テスト
-        [self gameStart];
     }
     return self;
 }
@@ -132,6 +137,10 @@ static GameScene* instanceOfGameScene;
 - (void)gameOver{
     // ハイスコアを更新する
     [self setHighScore:_nowScore];
+    // TitleSceneにスコアを表示させる
+    [[TitleScene sharedTitleScene] changeScoreWithScore:_nowScore];
+    // TitleSceneを表示する
+    [TitleScene sharedTitleScene].visible = YES;
 }
 
 #pragma mark --

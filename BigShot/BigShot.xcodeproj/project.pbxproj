@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D84C4FE814642CED009E7CAA /* Gun.m in Sources */ = {isa = PBXBuildFile; fileRef = D84C4FE714642CED009E7CAA /* Gun.m */; };
+		D8760746146590E000740468 /* TitleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D8760745146590E000740468 /* TitleScene.m */; };
+		D876074A146599CC00740468 /* start-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = D8760748146599CC00740468 /* start-hd.png */; };
+		D876074B146599CC00740468 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = D8760749146599CC00740468 /* start.png */; };
 		D87A45AB1461C0150097B960 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87A45AA1461C0150097B960 /* QuartzCore.framework */; };
 		D87A45AD1461C0150097B960 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87A45AC1461C0150097B960 /* OpenGLES.framework */; };
 		D87A45AF1461C0150097B960 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87A45AE1461C0150097B960 /* OpenAL.framework */; };
@@ -135,6 +138,10 @@
 /* Begin PBXFileReference section */
 		D84C4FE614642CED009E7CAA /* Gun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gun.h; sourceTree = "<group>"; };
 		D84C4FE714642CED009E7CAA /* Gun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gun.m; sourceTree = "<group>"; };
+		D8760744146590E000740468 /* TitleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleScene.h; sourceTree = "<group>"; };
+		D8760745146590E000740468 /* TitleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleScene.m; sourceTree = "<group>"; };
+		D8760748146599CC00740468 /* start-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "start-hd.png"; path = "../../resouce/start-hd.png"; sourceTree = "<group>"; };
+		D8760749146599CC00740468 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = start.png; path = ../../resouce/start.png; sourceTree = "<group>"; };
 		D87A45A61461C0150097B960 /* BigShot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigShot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87A45AA1461C0150097B960 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D87A45AC1461C0150097B960 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -444,6 +451,8 @@
 				D84C4FE714642CED009E7CAA /* Gun.m */,
 				D88AE8571464C28900EACCBC /* Target.h */,
 				D88AE8581464C28900EACCBC /* Target.m */,
+				D8760744146590E000740468 /* TitleScene.h */,
+				D8760745146590E000740468 /* TitleScene.m */,
 				D87A47151461C0170097B960 /* GameConfig.h */,
 				D87A45BB1461C0150097B960 /* Resources */,
 				D87A45CF1461C0150097B960 /* libs */,
@@ -455,6 +464,8 @@
 		D87A45BB1461C0150097B960 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D8760748146599CC00740468 /* start-hd.png */,
+				D8760749146599CC00740468 /* start.png */,
 				D888D0EC14642A15000B5F90 /* gunLeft-hd.png */,
 				D888D0ED14642A15000B5F90 /* gunLeft.png */,
 				D888D0E4146424AB000B5F90 /* target-hd.png */,
@@ -852,6 +863,8 @@
 				D888D0E7146424AB000B5F90 /* target.png in Resources */,
 				D888D0F014642A16000B5F90 /* gunLeft-hd.png in Resources */,
 				D888D0F114642A16000B5F90 /* gunLeft.png in Resources */,
+				D876074A146599CC00740468 /* start-hd.png in Resources */,
+				D876074B146599CC00740468 /* start.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -962,6 +975,7 @@
 				D87A471D1461C7370097B960 /* GameScene.m in Sources */,
 				D84C4FE814642CED009E7CAA /* Gun.m in Sources */,
 				D88AE8591464C28900EACCBC /* Target.m in Sources */,
+				D8760746146590E000740468 /* TitleScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
