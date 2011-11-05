@@ -8,6 +8,7 @@
 
 #import "GameScene.h"
 #import "Gun.h"
+#import "Target.h"
 @implementation GameScene
 
 static GameScene* instanceOfGameScene;
@@ -42,12 +43,58 @@ static GameScene* instanceOfGameScene;
         [self addChild:backgroundImage];
         
         ///////////////////////
-        //Gun
+        // Gun
         //////////////////////
         Gun *gun = [Gun gun];
         [self addChild:gun];
+        
+        //////////////////////
+        // Target
+        //////////////////////
+        // 左のターゲットを作る
+        _targetLeft = [Target target];
+        _targetLeft.position = CGPointMake(winSize.width/4, winSize.height/2+winSize.height/12);
+        [_targetLeft setTargetNum:2]; // 値を設定してみる
+        [self addChild:_targetLeft]; 
+        
+        // 右のターゲットを作る
+        _targetRight = [Target target];
+        _targetRight.position = CGPointMake(winSize.width/4+winSize.width/2, winSize.height/2+winSize.height/12);
+        [_targetRight setTargetNum:5]; // 値を設定してみる
+        [self addChild:_targetRight]; 
+        
+        [self setTarget];
     }
     return self;
+}
+
+#pragma mark --
+#pragma mark ターゲット関係
+
+- (void)setTarget{
+    int leftNum = floor(CCRANDOM_0_1()*8+1);
+    [_targetLeft setTargetNum:leftNum];
+    int rightNum = floor(CCRANDOM_0_1()*8+1);
+    while (rightNum == leftNum) {
+        rightNum = floor(CCRANDOM_0_1()*8+1);
+    }
+    [_targetRight setTargetNum:rightNum];
+}
+
+- (void)touchRightOrNot:(BOOL)boolean{
+    // booleanがYESの時は右、booleanがNOの時は左
+    int leftNum = [_targetLeft getTargetNum];
+    int rightNum = [_targetRight getTargetNum];
+    if ((boolean && rightNum>leftNum) || (!boolean && rightNum<leftNum) ) {
+        // ここに正解した時の処理を書く
+        
+        // ターゲットの初期化
+        [self setTarget];
+    }else{
+        // 不正解
+        CCLOG(@"間違ったよ！");
+    }
+    
 }
 
 #pragma mark --
@@ -90,13 +137,15 @@ static GameScene* instanceOfGameScene;
     Gun *gun = [Gun sharedGun];
     if(touchEndPoint.x<winSize.width/2){
         // 画面より左なら
-        CCLOG(@"左");
         [gun changeGunWithFlipX:NO];
+        [self touchRightOrNot:NO];
     }else{
         // 画面より右なら
-        CCLOG(@"右");
         [gun changeGunWithFlipX:YES];
+        [self touchRightOrNot:YES];
     }
 }
+
+
 
 @end

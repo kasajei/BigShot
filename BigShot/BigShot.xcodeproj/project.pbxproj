@@ -129,6 +129,7 @@
 		D888D0E7146424AB000B5F90 /* target.png in Resources */ = {isa = PBXBuildFile; fileRef = D888D0E5146424AB000B5F90 /* target.png */; };
 		D888D0F014642A16000B5F90 /* gunLeft-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = D888D0EC14642A15000B5F90 /* gunLeft-hd.png */; };
 		D888D0F114642A16000B5F90 /* gunLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = D888D0ED14642A15000B5F90 /* gunLeft.png */; };
+		D88AE8591464C28900EACCBC /* Target.m in Sources */ = {isa = PBXBuildFile; fileRef = D88AE8581464C28900EACCBC /* Target.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -375,6 +376,8 @@
 		D888D0E5146424AB000B5F90 /* target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = target.png; path = ../../resouce/target.png; sourceTree = "<group>"; };
 		D888D0EC14642A15000B5F90 /* gunLeft-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gunLeft-hd.png"; path = "../../resouce/gunLeft-hd.png"; sourceTree = "<group>"; };
 		D888D0ED14642A15000B5F90 /* gunLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gunLeft.png; path = ../../resouce/gunLeft.png; sourceTree = "<group>"; };
+		D88AE8571464C28900EACCBC /* Target.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Target.h; sourceTree = "<group>"; };
+		D88AE8581464C28900EACCBC /* Target.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -439,6 +442,8 @@
 				D87A471C1461C7370097B960 /* GameScene.m */,
 				D84C4FE614642CED009E7CAA /* Gun.h */,
 				D84C4FE714642CED009E7CAA /* Gun.m */,
+				D88AE8571464C28900EACCBC /* Target.h */,
+				D88AE8581464C28900EACCBC /* Target.m */,
 				D87A47151461C0170097B960 /* GameConfig.h */,
 				D87A45BB1461C0150097B960 /* Resources */,
 				D87A45CF1461C0150097B960 /* libs */,
@@ -956,6 +961,7 @@
 				D87A47111461C0170097B960 /* RootViewController.m in Sources */,
 				D87A471D1461C7370097B960 /* GameScene.m in Sources */,
 				D84C4FE814642CED009E7CAA /* Gun.m in Sources */,
+				D88AE8591464C28900EACCBC /* Target.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

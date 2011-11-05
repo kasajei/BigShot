@@ -9,9 +9,17 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
+@class Target;
+
 @interface GameScene : CCLayer {
+    Target *_targetLeft;
+    Target *_targetRight;
     
 }
 +(id)scene;
 +(GameScene*) sharedGameScene;
+// ターゲット関係
+- (void)setTarget;
+- (void)touchRightOrNot:(BOOL)boolean;
+
 @end
