@@ -63,9 +63,75 @@ static GameScene* instanceOfGameScene;
         [_targetRight setTargetNum:5]; // 値を設定してみる
         [self addChild:_targetRight]; 
         
-        [self setTarget];
+        ///////////////////////
+        // ゲームサイクル
+        //////////////////////
+        _timerLabel = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%.01f",10.0f] fontName:@"Marker Felt" fontSize:64];
+        _timerLabel.position = CGPointMake(winSize.width/2, winSize.height - winSize.height/6);
+        [self addChild:_timerLabel];
+        
+        
+        
+        /////////////////////
+        // Scoreをセットする
+        /////////////////////
+        int fontSize = 18;
+        _highScoreLabel = [CCLabelTTF labelWithString:@"High Score : 0" fontName:@"Marker Felt" fontSize:fontSize];
+        _highScoreLabel.position = CGPointMake(0, winSize.height/4);
+        _highScoreLabel.anchorPoint = CGPointMake(0, 1);
+        [self addChild:_highScoreLabel];
+        
+        CCLabelTTF *spaceLabel = [CCLabelTTF labelWithString:@"High " fontName:@"Marker Felt" fontSize:fontSize];
+        
+        _scoreLabel = [CCLabelTTF labelWithString:@"Score : 0" fontName:@"Marker Felt" fontSize:fontSize];
+        _scoreLabel.position = CGPointMake(spaceLabel.contentSize.width, winSize.height/4-_highScoreLabel.contentSize.height);
+        _scoreLabel.anchorPoint = CGPointMake(0, 1);
+        [self addChild:_scoreLabel];
+        
+        // 変数の初期化
+        _nowScore = 0;
+        _highScore = 0;
+        [self setScore];
+        
+        // テスト
+        [self gameStart];
     }
     return self;
+}
+
+#pragma  mark --
+#pragma  mark ゲームサイクル関係
+- (void)gameStart{
+    // ターゲットの初期化
+    [self setTarget];
+    
+    // スコアの初期化
+    _nowScore = 0;
+    
+    // タイマーの初期化
+    _timer = 10.0;
+    // ｓタイマーを0.1秒間隔で回す
+    [self schedule:@selector(updateTimer) interval:0.1];
+}
+
+- (void)updateTimer{
+    _timer -= 0.1;
+    
+    if (_timer<=0.0) {
+        // 0病の時は-0.0と表示されださかったので、特別に。
+        [_timerLabel setString:[NSString stringWithFormat:@"0.0"]];
+        // タイマーを止める
+        [self unschedule:@selector(updateTimer)];
+        [self gameOver];
+        return;
+    }
+    [_timerLabel setString:[NSString stringWithFormat:@"%.01f",_timer]];
+}
+
+// ゲームオーバーした時
+- (void)gameOver{
+    // ハイスコアを更新する
+    [self setHighScore:_nowScore];
 }
 
 #pragma mark --
@@ -87,13 +153,15 @@ static GameScene* instanceOfGameScene;
     int rightNum = [_targetRight getTargetNum];
     if ((boolean && rightNum>leftNum) || (!boolean && rightNum<leftNum) ) {
         // ここに正解した時の処理を書く
-        
+        _nowScore++;
         // ターゲットの初期化
         [self setTarget];
     }else{
         // 不正解
+        _nowScore -= 2;
         CCLOG(@"間違ったよ！");
     }
+    [self updateScore:_nowScore];
     
 }
 
@@ -146,6 +214,30 @@ static GameScene* instanceOfGameScene;
     }
 }
 
+#pragma mark --
+#pragma mark score関係
+// 起動時にスコアを表示する。
+-(void)setScore{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    _highScore = [defaults integerForKey:@"highScore"];
+    [_highScoreLabel setString:[NSString stringWithFormat:@"High Score : %d",_highScore]];
+}
+// ゲーム中にスコアを更新するごとに呼び出される
+-(void)updateScore:(int)score{
+    if(_highScore<score){
+        // 今のスコアがハイスコアを上回った時。
+        _highScore = score;
+        [_highScoreLabel setString:[NSString stringWithFormat:@"High Score : %d",_highScore]];
+    }
+    [_scoreLabel setString:[NSString stringWithFormat:@"Score : %d",_nowScore]];
+}
+
+// ゲ-ムが終わったときにハイスコアを保存する。
+-(void)setHighScore:(int)score{    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:_highScore forKey:@"highScore"];
+    [defaults synchronize];
+}
 
 
 @end
