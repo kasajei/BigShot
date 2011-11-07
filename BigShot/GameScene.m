@@ -122,6 +122,7 @@ static GameScene* instanceOfGameScene;
     _timer = 10.0;
     // ｓタイマーを0.1秒間隔で回す
     [self schedule:@selector(updateTimer) interval:0.1];
+
 }
 
 - (void)updateTimer{
@@ -145,9 +146,7 @@ static GameScene* instanceOfGameScene;
     // ハイスコアを更新する
     [self setHighScore:_nowScore];
     // TitleSceneにスコアを表示させる
-    [[TitleScene sharedTitleScene] changeScoreWithScore:_nowScore];
-    // TitleSceneを表示する
-    [TitleScene sharedTitleScene].visible = YES;
+    [[TitleScene sharedTitleScene] gameOverWithScore:_nowScore];
 }
 
 #pragma mark --
@@ -156,11 +155,18 @@ static GameScene* instanceOfGameScene;
 - (void)setTarget{
     [self unschedule:@selector(setTarget)];
     int leftNum = floor(CCRANDOM_0_1()*8+1);
-    [_targetLeft setTargetNum:leftNum];
     int rightNum = floor(CCRANDOM_0_1()*8+1);
     while (rightNum == leftNum) {
         rightNum = floor(CCRANDOM_0_1()*8+1);
     }
+    
+    
+    if (CCRANDOM_0_1()<0.3) {
+        leftNum *= -1;
+        rightNum *= -1;
+    }
+    
+    [_targetLeft setTargetNum:leftNum];
     [_targetRight setTargetNum:rightNum];
 }
 
@@ -195,7 +201,7 @@ static GameScene* instanceOfGameScene;
 - (void)onEnter
 {
     // タッチを感知してselfをDelegateに通知。優先順位は0。
-	[[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+	[[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:1 swallowsTouches:YES];
 	[super onEnter];
 }
 // viewWillDisapearみたいなのも。レイヤーの非表示時に呼ばれる

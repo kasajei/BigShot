@@ -18,5 +18,5 @@
 // メニューからのアクション
 -(void)startGame:(CCMenuItem*)menuItem;
 // ゲームが終わったときに呼ばれる
-- (void)changeScoreWithScore:(int)score;
+-(void)gameOverWithScore:(int)score;
 @end

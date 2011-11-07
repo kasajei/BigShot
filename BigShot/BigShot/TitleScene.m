@@ -24,7 +24,7 @@ static TitleScene* instanceOfTitleScene;
 }
 // 初期化メソッド
 -(id)init{
-    if((self = [super initWithColor:ccc4(0, 0, 0, 230)])){
+    if((self = [super initWithColor:ccc4(0, 0, 0, 245)])){
         instanceOfTitleScene = self;
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         CCLabelTTF *titleLabel = [CCLabelTTF labelWithString:@"BigShot" fontName:@"Marker Felt" fontSize:60];
@@ -51,13 +51,15 @@ static TitleScene* instanceOfTitleScene;
     CCLOG(@"startGame");
     self.visible = NO;
     [[GameScene sharedGameScene] gameStart];
+    _startItem.isEnabled = NO;
 }
 
-#pragma mark --
-#pragma mark 表示を変える
-
-- (void)changeScoreWithScore:(int)score{
+-(void)gameOverWithScore:(int)score{
     [_wellcomeLabel setString:[NSString stringWithFormat:@"Score : %d",score]];
+    self.visible = YES;
+    _startItem.isEnabled = YES;
 }
+
+
 
 @end
