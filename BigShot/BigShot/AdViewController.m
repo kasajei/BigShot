@@ -53,7 +53,7 @@
                                                GAD_SIZE_320x50.height)];
         
         // Specify the ad's "unit identifier." This is your AdMob Publisher ID.
-        bannerView.adUnitID = @"a14e9e7d01483d5";
+        bannerView.adUnitID = @"a14eb800d539589";
         
         // Let the runtime know which UIViewController to restore after taking
         // the user wherever the ad goes and add it to the view hierarchy.
@@ -126,7 +126,7 @@
 #pragma mark -
 #pragma mark AdMaker Delegate
 -(NSArray*)adKeyForAdMakerView:(AdMakerView*)view {
-	return [NSArray arrayWithObjects:@"http://images.ad-maker.info/apps/zs657uujd6dg.html",@"957",@"6417",nil];
+	return [NSArray arrayWithObjects:@"http://images.ad-maker.info/apps/axixy3go6s2l.html",@"235",@"6875",nil];
     //return [NSArray arrayWithObjects:@"http://images.ad-maker.info/apps/j80js1ppplhu.html",@"1333",@"3300",nil];
 }
 
