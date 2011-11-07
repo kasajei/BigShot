@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D83D07CE1468342800E93E56 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D83D07C81468342800E93E56 /* libGoogleAdMobAds.a */; };
+		D83D07CF1468342800E93E56 /* libAdMaker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D83D07CB1468342800E93E56 /* libAdMaker.a */; };
+		D83D07D01468342800E93E56 /* AdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83D07CD1468342800E93E56 /* AdViewController.m */; };
+		D83D07D41468344200E93E56 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83D07D31468344200E93E56 /* SystemConfiguration.framework */; };
+		D83D07D61468345500E93E56 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83D07D51468345500E93E56 /* MessageUI.framework */; };
+		D83D07D81468345900E93E56 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83D07D71468345900E93E56 /* iAd.framework */; };
 		D83FD5E214667DBE00E39423 /* ban-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = D83FD5DF14667DBE00E39423 /* ban-hd.png */; };
 		D83FD5E314667DBE00E39423 /* ban.plist in Resources */ = {isa = PBXBuildFile; fileRef = D83FD5E014667DBE00E39423 /* ban.plist */; };
 		D83FD5E414667DBE00E39423 /* ban.png in Resources */ = {isa = PBXBuildFile; fileRef = D83FD5E114667DBE00E39423 /* ban.png */; };
@@ -142,6 +148,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D83D07C21468342800E93E56 /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
+		D83D07C31468342800E93E56 /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		D83D07C41468342800E93E56 /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
+		D83D07C51468342800E93E56 /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		D83D07C61468342800E93E56 /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
+		D83D07C71468342800E93E56 /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
+		D83D07C81468342800E93E56 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		D83D07C91468342800E93E56 /* AdMakerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMakerDelegate.h; sourceTree = "<group>"; };
+		D83D07CA1468342800E93E56 /* AdMakerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMakerView.h; sourceTree = "<group>"; };
+		D83D07CB1468342800E93E56 /* libAdMaker.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdMaker.a; sourceTree = "<group>"; };
+		D83D07CC1468342800E93E56 /* AdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdViewController.h; sourceTree = "<group>"; };
+		D83D07CD1468342800E93E56 /* AdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdViewController.m; sourceTree = "<group>"; };
+		D83D07D31468344200E93E56 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D83D07D51468345500E93E56 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		D83D07D71468345900E93E56 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		D83FD5DF14667DBE00E39423 /* ban-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ban-hd.png"; path = "../../resouce/ban-hd.png"; sourceTree = "<group>"; };
 		D83FD5E014667DBE00E39423 /* ban.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ban.plist; path = ../../resouce/ban.plist; sourceTree = "<group>"; };
 		D83FD5E114667DBE00E39423 /* ban.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ban.png; path = ../../resouce/ban.png; sourceTree = "<group>"; };
@@ -404,23 +425,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D83D07D81468345900E93E56 /* iAd.framework in Frameworks */,
+				D83D07D61468345500E93E56 /* MessageUI.framework in Frameworks */,
+				D87A45B11461C0150097B960 /* AudioToolbox.framework in Frameworks */,
+				D83D07D41468344200E93E56 /* SystemConfiguration.framework in Frameworks */,
 				D87A45AB1461C0150097B960 /* QuartzCore.framework in Frameworks */,
 				D87A45AD1461C0150097B960 /* OpenGLES.framework in Frameworks */,
 				D87A45AF1461C0150097B960 /* OpenAL.framework in Frameworks */,
-				D87A45B11461C0150097B960 /* AudioToolbox.framework in Frameworks */,
 				D87A45B31461C0150097B960 /* AVFoundation.framework in Frameworks */,
 				D87A45B51461C0150097B960 /* UIKit.framework in Frameworks */,
 				D87A45B71461C0150097B960 /* Foundation.framework in Frameworks */,
 				D87A45B91461C0150097B960 /* CoreGraphics.framework in Frameworks */,
+				D83D07CE1468342800E93E56 /* libGoogleAdMobAds.a in Frameworks */,
+				D83D07CF1468342800E93E56 /* libAdMaker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D83D07D21468342E00E93E56 /* AdKit */ = {
+			isa = PBXGroup;
+			children = (
+				D83D07C21468342800E93E56 /* GADBannerView.h */,
+				D83D07C31468342800E93E56 /* GADBannerViewDelegate.h */,
+				D83D07C41468342800E93E56 /* GADInterstitial.h */,
+				D83D07C51468342800E93E56 /* GADInterstitialDelegate.h */,
+				D83D07C61468342800E93E56 /* GADRequest.h */,
+				D83D07C71468342800E93E56 /* GADRequestError.h */,
+				D83D07C81468342800E93E56 /* libGoogleAdMobAds.a */,
+				D83D07C91468342800E93E56 /* AdMakerDelegate.h */,
+				D83D07CA1468342800E93E56 /* AdMakerView.h */,
+				D83D07CB1468342800E93E56 /* libAdMaker.a */,
+				D83D07CC1468342800E93E56 /* AdViewController.h */,
+				D83D07CD1468342800E93E56 /* AdViewController.m */,
+			);
+			name = AdKit;
+			sourceTree = "<group>";
+		};
 		D87A459B1461C0150097B960 = {
 			isa = PBXGroup;
 			children = (
+				D83D07D71468345900E93E56 /* iAd.framework */,
+				D83D07D51468345500E93E56 /* MessageUI.framework */,
+				D83D07D31468344200E93E56 /* SystemConfiguration.framework */,
 				D87A45BA1461C0150097B960 /* BigShot */,
 				D87A45A91461C0150097B960 /* Frameworks */,
 				D87A45A71461C0150097B960 /* Products */,
@@ -466,6 +514,7 @@
 				D8760744146590E000740468 /* TitleScene.h */,
 				D8760745146590E000740468 /* TitleScene.m */,
 				D87A47151461C0170097B960 /* GameConfig.h */,
+				D83D07D21468342E00E93E56 /* AdKit */,
 				D87A45BB1461C0150097B960 /* Resources */,
 				D87A45CF1461C0150097B960 /* libs */,
 				D87A47081461C0170097B960 /* Supporting Files */,
@@ -1000,6 +1049,7 @@
 				D84C4FE814642CED009E7CAA /* Gun.m in Sources */,
 				D88AE8591464C28900EACCBC /* Target.m in Sources */,
 				D8760746146590E000740468 /* TitleScene.m in Sources */,
+				D83D07D01468342800E93E56 /* AdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1053,6 +1103,10 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = BigShot/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/BigShot\"",
+				);
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -1069,6 +1123,10 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = BigShot/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/BigShot\"",
+				);
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;

@@ -13,6 +13,8 @@
 #import "GameScene.h"
 #import "RootViewController.h"
 
+#import "AdViewController.h"
+
 @implementation AppDelegate
 
 @synthesize window;
@@ -94,6 +96,10 @@
 	
 	// make the OpenGLView a child of the view controller
 	[viewController setView:glView];
+    
+    // 広告
+    adViewController = [[AdViewController alloc] init];
+    [viewController.view addSubview:adViewController.view];
 	
 	// make the View Controller a child of the main window
 	[window addSubview: viewController.view];
