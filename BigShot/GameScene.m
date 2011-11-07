@@ -30,6 +30,8 @@ static GameScene* instanceOfGameScene;
 -(id)init{
     if((self = [super init])){
         instanceOfGameScene = self;
+        // タップは最初は不可能
+        _touchEnable = NO;
         // 画面のサイズを取得する
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         
@@ -107,6 +109,9 @@ static GameScene* instanceOfGameScene;
 #pragma  mark --
 #pragma  mark ゲームサイクル関係
 - (void)gameStart{
+    // タップを可能にする
+    _touchEnable = YES;
+    
     // ターゲットの初期化
     [self setTarget];
     
@@ -123,6 +128,8 @@ static GameScene* instanceOfGameScene;
     _timer -= 0.1;
     
     if (_timer<=0.0) {
+        _touchEnable = NO;
+        
         // 0病の時は-0.0と表示されださかったので、特別に。
         [_timerLabel setString:[NSString stringWithFormat:@"0.0"]];
         // タイマーを止める
@@ -147,6 +154,7 @@ static GameScene* instanceOfGameScene;
 #pragma mark ターゲット関係
 
 - (void)setTarget{
+    [self unschedule:@selector(setTarget)];
     int leftNum = floor(CCRANDOM_0_1()*8+1);
     [_targetLeft setTargetNum:leftNum];
     int rightNum = floor(CCRANDOM_0_1()*8+1);
@@ -163,11 +171,18 @@ static GameScene* instanceOfGameScene;
     if ((boolean && rightNum>leftNum) || (!boolean && rightNum<leftNum) ) {
         // ここに正解した時の処理を書く
         _nowScore++;
+        
+        // 正解した時の効果をつける
+        if (boolean) [_targetRight targetActionWithCollect:YES];
+        else [_targetLeft targetActionWithCollect:YES];
+        
         // ターゲットの初期化
-        [self setTarget];
+        [self schedule:@selector(setTarget) interval:0.1];
     }else{
         // 不正解
         _nowScore -= 2;
+        if (boolean) [_targetRight targetActionWithCollect:NO];
+        else [_targetLeft targetActionWithCollect:NO];
         CCLOG(@"間違ったよ！");
     }
     [self updateScore:_nowScore];
@@ -196,8 +211,9 @@ static GameScene* instanceOfGameScene;
 // タッチが始まった
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    // タッチ可能
-    return YES;// NOだとそれ以降は動かない
+    CCLOG(@"touch");
+    // タッチ可能かどうか
+    return _touchEnable;
 }
 // タッチが動いてる
 - (void)ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event

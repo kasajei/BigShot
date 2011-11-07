@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D83FD5E214667DBE00E39423 /* ban-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = D83FD5DF14667DBE00E39423 /* ban-hd.png */; };
+		D83FD5E314667DBE00E39423 /* ban.plist in Resources */ = {isa = PBXBuildFile; fileRef = D83FD5E014667DBE00E39423 /* ban.plist */; };
+		D83FD5E414667DBE00E39423 /* ban.png in Resources */ = {isa = PBXBuildFile; fileRef = D83FD5E114667DBE00E39423 /* ban.png */; };
 		D84C4FE814642CED009E7CAA /* Gun.m in Sources */ = {isa = PBXBuildFile; fileRef = D84C4FE714642CED009E7CAA /* Gun.m */; };
 		D8760746146590E000740468 /* TitleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D8760745146590E000740468 /* TitleScene.m */; };
 		D876074A146599CC00740468 /* start-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = D8760748146599CC00740468 /* start-hd.png */; };
@@ -133,9 +136,15 @@
 		D888D0F014642A16000B5F90 /* gunLeft-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = D888D0EC14642A15000B5F90 /* gunLeft-hd.png */; };
 		D888D0F114642A16000B5F90 /* gunLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = D888D0ED14642A15000B5F90 /* gunLeft.png */; };
 		D88AE8591464C28900EACCBC /* Target.m in Sources */ = {isa = PBXBuildFile; fileRef = D88AE8581464C28900EACCBC /* Target.m */; };
+		D8D70F731467FE9E002C111B /* ban-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8D70F721467FE9E002C111B /* ban-hd.plist */; };
+		D8D70F791468129D002C111B /* chi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8D70F781468129D002C111B /* chi.mp3 */; };
+		D8D70F7B146812A2002C111B /* ban.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8D70F7A146812A2002C111B /* ban.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D83FD5DF14667DBE00E39423 /* ban-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ban-hd.png"; path = "../../resouce/ban-hd.png"; sourceTree = "<group>"; };
+		D83FD5E014667DBE00E39423 /* ban.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ban.plist; path = ../../resouce/ban.plist; sourceTree = "<group>"; };
+		D83FD5E114667DBE00E39423 /* ban.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ban.png; path = ../../resouce/ban.png; sourceTree = "<group>"; };
 		D84C4FE614642CED009E7CAA /* Gun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gun.h; sourceTree = "<group>"; };
 		D84C4FE714642CED009E7CAA /* Gun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gun.m; sourceTree = "<group>"; };
 		D8760744146590E000740468 /* TitleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleScene.h; sourceTree = "<group>"; };
@@ -385,6 +394,9 @@
 		D888D0ED14642A15000B5F90 /* gunLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gunLeft.png; path = ../../resouce/gunLeft.png; sourceTree = "<group>"; };
 		D88AE8571464C28900EACCBC /* Target.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Target.h; sourceTree = "<group>"; };
 		D88AE8581464C28900EACCBC /* Target.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target.m; sourceTree = "<group>"; };
+		D8D70F721467FE9E002C111B /* ban-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ban-hd.plist"; path = "../../resouce/ban-hd.plist"; sourceTree = "<group>"; };
+		D8D70F781468129D002C111B /* chi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = chi.mp3; path = ../../resouce/chi.mp3; sourceTree = "<group>"; };
+		D8D70F7A146812A2002C111B /* ban.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ban.mp3; path = ../../resouce/ban.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -464,6 +476,12 @@
 		D87A45BB1461C0150097B960 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D8D70F7A146812A2002C111B /* ban.mp3 */,
+				D8D70F781468129D002C111B /* chi.mp3 */,
+				D8D70F721467FE9E002C111B /* ban-hd.plist */,
+				D83FD5DF14667DBE00E39423 /* ban-hd.png */,
+				D83FD5E014667DBE00E39423 /* ban.plist */,
+				D83FD5E114667DBE00E39423 /* ban.png */,
 				D8760748146599CC00740468 /* start-hd.png */,
 				D8760749146599CC00740468 /* start.png */,
 				D888D0EC14642A15000B5F90 /* gunLeft-hd.png */,
@@ -865,6 +883,12 @@
 				D888D0F114642A16000B5F90 /* gunLeft.png in Resources */,
 				D876074A146599CC00740468 /* start-hd.png in Resources */,
 				D876074B146599CC00740468 /* start.png in Resources */,
+				D83FD5E214667DBE00E39423 /* ban-hd.png in Resources */,
+				D83FD5E314667DBE00E39423 /* ban.plist in Resources */,
+				D83FD5E414667DBE00E39423 /* ban.png in Resources */,
+				D8D70F731467FE9E002C111B /* ban-hd.plist in Resources */,
+				D8D70F791468129D002C111B /* chi.mp3 in Resources */,
+				D8D70F7B146812A2002C111B /* ban.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1028,6 +1052,7 @@
 				GCC_PREFIX_HEADER = BigShot/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = BigShot/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -1043,6 +1068,7 @@
 				GCC_PREFIX_HEADER = BigShot/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = BigShot/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;

@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
+enum{
+    kTagParticle,
+};
+
 @interface Target : CCSprite {
     int _targetNum;
     CCLabelTTF *_targetNumLabel;
@@ -17,4 +21,6 @@
 -(id)initWithTargetImage;
 -(void)setTargetNum:(int)num;
 -(int)getTargetNum;
+- (void)targetActionWithCollect:(BOOL)boolean;
+- (void)resetColor;
 @end

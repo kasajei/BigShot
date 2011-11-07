@@ -16,6 +16,10 @@ enum{
 @class Target;
 
 @interface GameScene : CCLayer {
+    // 操作関係
+    BOOL _touchEnable;
+    
+    // ターゲット関係
     Target *_targetLeft;
     Target *_targetRight;
     
