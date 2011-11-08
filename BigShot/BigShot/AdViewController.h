@@ -20,6 +20,6 @@
     int topMargin;
     int bannerOffSetHeight;
 }
--(void)startAd;
 @property (retain) ADBannerView *vAds;
+- (void)startAds;
 @end

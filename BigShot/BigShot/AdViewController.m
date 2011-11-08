@@ -58,7 +58,7 @@
         // Let the runtime know which UIViewController to restore after taking
         // the user wherever the ad goes and add it to the view hierarchy.
         bannerView.rootViewController = self;
-        [self.view addSubview:bannerView];//debug
+        //[self.view addSubview:bannerView];//debug
         
         // Initiate a generic request to load it with an ad.
         [bannerView loadRequest:[GADRequest request]];
@@ -70,11 +70,17 @@
         self.vAds = tmpADView;
         [tmpADView release];
         self.vAds.delegate = self;
-        [self.view addSubview:self.vAds];//debug
+        //[self.view addSubview:self.vAds];//debug
         bannerIsVisible = NO;
         
     }
     return self;
+}
+
+- (void)startAds{
+    [self.view.superview addSubview:AdMaker];
+    [self.view.superview addSubview:bannerView];
+    [self.view.superview addSubview:self.vAds];
 }
 
 

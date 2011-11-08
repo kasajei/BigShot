@@ -91,7 +91,7 @@
 #endif
 	
 	[director setAnimationInterval:1.0/60];
-	[director setDisplayFPS:YES];
+	[director setDisplayFPS:NO];
 	
 	
 	// make the OpenGLView a child of the view controller
@@ -100,10 +100,11 @@
     // 広告
     adViewController = [[AdViewController alloc] init];
     [viewController.view addSubview:adViewController.view];
+    [adViewController startAds];
 	
 	// make the View Controller a child of the main window
 	[window addSubview: viewController.view];
-	
+	window.rootViewController = viewController;
 	[window makeKeyAndVisible];
 	
 	// Default texture format for PNG/BMP/TIFF/JPEG/GIF images
