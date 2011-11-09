@@ -26,12 +26,12 @@ static TitleScene* instanceOfTitleScene;
 }
 // 初期化メソッド
 -(id)init{
-    if((self = [super initWithColor:ccc4(0, 0, 0, 245)])){
+    if((self = [super initWithColor:ccc4(0, 0, 0, 248)])){
         instanceOfTitleScene = self;
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         
         // タイトルを付ける
-        CCLabelTTF *titleLabel = [CCLabelTTF labelWithString:@"BigShot" fontName:@"Marker Felt" fontSize:60];
+        CCLabelTTF *titleLabel = [CCLabelTTF labelWithString:@"BigShot" fontName:@"Marker Felt" fontSize:88];
         titleLabel.position = CGPointMake(winSize.width/2, winSize.height - winSize.height/4);
         [self addChild:titleLabel];
         
@@ -100,14 +100,21 @@ static TitleScene* instanceOfTitleScene;
 
 -(void)startGame:(CCMenuItem*)menuItem{
     CCLOG(@"startGame");
-    self.visible = NO;
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    CCMoveTo *action = [CCMoveTo actionWithDuration:0.2 position:CGPointMake(0,winSize.height)];
+    [self runAction:action];
+    [self schedule:@selector(startGameScene) interval:0.2];
+}
+
+-(void)startGameScene{
+    [self unschedule:@selector(startGameScene)];
     [[GameScene sharedGameScene] gameStart];
-    _startItem.isEnabled = NO;
 }
 
 -(void)gameOverWithScore:(int)score{
-    self.visible = YES;
-    _startItem.isEnabled = YES;
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    CCMoveTo *action = [CCMoveTo actionWithDuration:0.2 position:CGPointMake(0,0)];
+    [self runAction:action];
     if ([NSLocalizedString(@"la", @"") isEqualToString:@"ja"]) {
         NSArray *shogo = [shogoArray filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"score <= %d", score]];
         CCLOG(@"%@",shogo);
@@ -140,7 +147,7 @@ static TitleScene* instanceOfTitleScene;
 }
 
 - (void)showTweetWebView:(CCMenuItem*)menuItem{
-    NSString *tweetText = [NSString stringWithFormat:NSLocalizedString(@"射的ガンマン会「BigShot」では\"%@\"として有名なんだぜ。覚えてやがれ！",@""),_wellcomeLabel.string];
+    NSString *tweetText = [NSString stringWithFormat:NSLocalizedString(@"射的屋「BigShot」では\"%@\"として有名なんだぜ。覚えてやがれ！",@""),_wellcomeLabel.string];
     [tweetViewController startTweetViewWithTweetText:tweetText];
     
     RootViewController *viewController = (RootViewController*)[UIApplication sharedApplication].keyWindow.rootViewController;
